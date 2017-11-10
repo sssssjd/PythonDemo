@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
+
 list01 = ['runoob', 786, 2.23, 'john', 70.2]
 list02 = [123, 'john']
 
