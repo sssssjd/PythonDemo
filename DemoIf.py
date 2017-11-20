@@ -32,12 +32,12 @@ while 2:
 BMI = t/s/s*10000
 
 if BMI<18.5:
-    print "BMI为%.2f,低于18.5，过轻" % BMI
+    print "BMI=%.2f, 低于18.5，属于：过轻。" % BMI
 elif 18.5 <= BMI < 25:
-    print "BMI为%.2f,位于18.5-25，正常" % BMI
+    print "BMI=%.2f, 位于18.5-25，属于：正常。" % BMI
 elif 25 <= BMI < 28:
-    print "BMI为%.2f,位于25-28，过重" % BMI
+    print "BMI=%.2f, 位于25-28，属于：过重。" % BMI
 elif 28 <= BMI < 32:
-    print "BMI为%.2f,位于28-32，肥胖" % BMI
+    print "BMI=%.2f, 位于28-32，属于：肥胖。" % BMI
 elif BMI >= 28:
-    print "BMI为%.2f,高于32，验证肥胖" % BMI
+    print "BMI=%.2f, 高于32，属于：严重肥胖。" % BMI
