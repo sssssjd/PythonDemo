@@ -9,24 +9,29 @@
 # 25-28：过重
 # 28-32：肥胖
 # 高于32：严重肥胖
+import re
 
+def zz(a):
+    Value = re.compile(r'^[-+]?[0-9]+\.?[0-9]+$')
+    rs = Value.match(a)
+    return rs
 
 while 1:
     s = raw_input ("身高(cm):")
-    if s.isdigit():
+    if zz(s):
         s = float(s)
         break
     else:
-        print '输入错误，只接受整数，请重新输入！'
+        print '输入错误，请重新输入！'
     continue
 
-while 2:
+while 1:
     t = raw_input ("体重(kg):")
-    if t.isdigit():
+    if zz(t):
         t = float(t)
         break
     else:
-        print '输入错误，只接受整数，请重新输入！'
+        print '输入错误，请重新输入！'
     continue
 
 BMI = t/s/s*10000
