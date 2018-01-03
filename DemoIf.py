@@ -12,7 +12,7 @@
 import re
 
 def zz(a):
-    Value = re.compile(r'^[-+]?[0-9]+\.?[0-9]+$')
+    Value = re.compile(r'^[0-9]+\.?[0-9]+$')
     rs = Value.match(a)
     return rs
 
