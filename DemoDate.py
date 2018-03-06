@@ -2,10 +2,10 @@
 import time
 
 t = time.time()
-print t  #时间戳
-print time.localtime(t)  #当前时间
-print time.asctime(time.localtime())  #格式化的时间
-print time.strftime("%Y-%m-%d %I:%M:%S %p" , time.localtime(t)) #格式化日期
+print (t) #时间戳
+print (time.localtime(t))  #当前时间
+print (time.asctime(time.localtime()))  #格式化的时间
+print (time.strftime("%Y-%m-%d %I:%M:%S %p" , time.localtime(t))) #格式化日期
 
 # %y 两位数的年份表示（00-99）
 # %Y 四位数的年份表示（000-9999）

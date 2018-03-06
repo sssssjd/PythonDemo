@@ -28,5 +28,5 @@ def fast2(x, y):
     time.sleep(0.0012)
     return x * y
 
-print fast1(1,2)
-print fast2(2,3)
+print(fast1(1,2))
+print(fast2(2,3))
