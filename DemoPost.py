@@ -4,8 +4,8 @@
 from urllib import request,parse
 
 print('Login to weibo.cn...')
-email = input('Email: ')
-passwd = input('Password: ')
+email = input('Email:')
+passwd = input('Password:')
 login_data = parse.urlencode([
     ('username', email),
     ('password', passwd),
