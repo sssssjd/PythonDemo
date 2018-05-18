@@ -1,22 +1,22 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
-# fo = open("foo.txt", "w") # w 	打开一个文件只用于写入。如果该文件已存在则将其覆盖。如果该文件不存在，创建新文件。
+# fo = open("foo.txt", "w") # w打开一个文件只用于写入。如果该文件已存在则将其覆盖。如果该文件不存在，创建新文件。
 # fo.write( "www.runoob.com!\nVery good site!\n");
 
 # 打开一个文件
 fo = open("foo.txt", "r+")
-str = fo.read(10);
-print ("读取的字符串是 : ", str)
+str1 = fo.read(10)
+print("读取的字符串是: ", str1)
 
 # 查找当前位置
-position = fo.tell();
-print ("当前文件位置 : ", position)
+position = fo.tell()
+print("当前文件位置 : ", position)
 
 # 把指针再次重新定位到文件开头
-position = fo.seek(0, 0);
-str = fo.read(10);
-print ("重新读取字符串 : ", str)
+position = fo.seek(0, 0)
+str2 = fo.read(10)
+print("重新读取字符串 : ", str2)
 # 关闭打开的文件
 fo.close()
 

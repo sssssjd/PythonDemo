@@ -4,18 +4,23 @@
 import hashlib
 
 db = {}
+
+
 def get_md5(s):
     return hashlib.md5(s.encode('utf-8')).hexdigest()
 
+
 def register(username, password):
-    db[username] = get_md5(password + username + 'sjd') #加盐
+    db[username] = get_md5(password + username + 'sjd')  # 加盐
+
 
 register('michael', '123456')
 register('bob', 'abc999')
 register('alice', 'alice2008')
 print(db)
 
-def login(username,password):
+
+def login(username, password):
     password = password + username + 'sjd'
     if username in db:
         if db[username] == get_md5(password):

@@ -2,15 +2,15 @@
 # -*- coding: UTF-8 -*-
 
 import mysql.connector
-#open connect
-conn1 = mysql.connector.connect(user = 'root',password = 'root123',database = 'test')
+# open connect
+conn1 = mysql.connector.connect(user='root', password='root123', database='test')
 cursor = conn1.cursor()
-#create table user
+# create table user
 cursor.execute('create table user (id varchar(20) primary key, name varchar(20))')
-#insert record
-cursor.execute('insert into user (id,name) value(%s,%s)',['1','Michael'])
+# insert record
+cursor.execute('insert into user (id,name) value(%s,%s)', ['1', 'Michael'])
 cursor.rowcount
-#commit
+# commit
 conn1.commit()
 cursor.close()
 
