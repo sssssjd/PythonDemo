@@ -4,6 +4,7 @@
 import unittest
 from DemoUnittest02 import Student
 
+
 class TestStudent(unittest.TestCase):
 
     def test_80_to_100(self):
@@ -31,6 +32,7 @@ class TestStudent(unittest.TestCase):
             s1.get_grade()
         with self.assertRaises(ValueError):
             s2.get_grade()
+
 
 if __name__ == '__main__':
     unittest.main()
