@@ -37,13 +37,13 @@ def get_hotsearch():
     hot_search = requests.get(url2)
     hot_search.encoding = 'utf-8'
     try:
-        hotkey = re.compile(r'td class=\\"td_05\\"><a href=\\"\\/weibo\\/(.*?)&Refer=top\\"')
+        hotkey = re.compile(r'a href="/weibo\?q=(.*?)&Refer=top"')
         hotkeylistbe = re.findall(hotkey, hot_search.text)
         dict1 = {}
         for title in hotkeylistbe:
             # 去除干扰数字
-            title = title.replace('25', '')
-            url = 'http://s.weibo.com/weibo/' + title
+            # title = title.replace('25', '')
+            url = 'http://s.weibo.com/weibo?q=' + title + '&Refer=top'
             title = urllib.parse.unquote(title)  # 转码
             dict1[title] = url
 
@@ -87,7 +87,7 @@ def train_search():
             b = checi['seats']
             for key, value in b.items():
                 list1.append(' %s,票价：%s,余票:%s张;' % (key, value['price'], value['count']))
-            train_list.append(list)
+            train_list.append(list1)
 
         e7['state'] = 'normal'
         e7.delete(1.0, tk.END)
